@@ -1,0 +1,10 @@
+{
+  "name": "com.vahtyah.setupproject",
+  "version": "1.0.0",
+  "displayName": "Setup Project",
+  "description": "Setup Project",
+  "unity": "2022.1",
+  "author": {
+    "name": "VahTyah"
+  }
+}
