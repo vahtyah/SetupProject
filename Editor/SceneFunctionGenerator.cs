@@ -7,7 +7,7 @@ using UnityEditor;
 public static class SceneFunctionGenerator
 {
     private const string DIRECTORY_SCENES = "Assets/_Project/Scenes";
-    private const string SCRIPT_PATH = "Assets/_Project/Scripts/Editor/HelpfulButtons.cs";
+    private const string SCRIPT_PATH = "Packages/com.vahtyah.setupproject/Editor/HelpfulButtons.cs";
     private const string GENERATED_START_MARKER = "// GENERATED METHODS START";
     private const string GENERATED_END_MARKER = "// GENERATED METHODS END";
 

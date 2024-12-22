@@ -214,23 +214,23 @@ public class HelpfulButtons : OdinEditorWindow
     
     [BoxGroup(BOX_GROUP_BUTTONS)]
     [TabGroup(TAB_GROUP_BUTTONS, "Button Used Rarely", order: 40)]
-    [ResponsiveButtonGroup(TAB_GROUP_BUTTONS + "/Button Used Rarely/CreateFolders", VisibleIf = "IsDirectoryOfScriptsExists",
+    [ResponsiveButtonGroup(TAB_GROUP_BUTTONS + "/Button Used Rarely/CreateFolders", VisibleIf = "IsDirectoryOfScriptsDoNotExists",
         DefaultButtonSize = ButtonSizes.Large)]
     public void CreateFolders()
     {
         Folders.Create("_Project", "Animation", "Materials", "Prefabs");
         Refresh();
-        Folders.Move("Scenes", "_Project");
+        Folders.Move("Scenes", "_Project"); 
         Refresh();
         // Optional: Disable Domain Reload
         // EditorSettings.enterPlayModeOptions = EnterPlayModeOptions.DisableDomainReload | EnterPlayModeOptions.DisableSceneReload;
     }
 
-    private bool IsDirectoryOfScriptsExists() =>
-        Directory.Exists(System.IO.Path.Combine(Application.dataPath, DIRECTORY_SCENES));
+    private bool IsDirectoryOfScriptsDoNotExists() =>
+        !Directory.Exists(System.IO.Path.Combine(Application.dataPath, DIRECTORY_SCENES));
 
     [ResponsiveButtonGroup(TAB_GROUP_BUTTONS + "/Button Used Rarely/ImportExtensionEditor",
-        VisibleIf = "IsDirectoryOfEditorExtensionsExists",
+        VisibleIf = "IsDirectoryOfEditorExtensionsDoNotExists",
         DefaultButtonSize = ButtonSizes.Large)]
     public void ImportExtensionEditor()
     {
@@ -238,7 +238,6 @@ public class HelpfulButtons : OdinEditorWindow
         Assets.ImportAsset("vInspector 2", "kubacho lab/Editor ExtensionsUtilities");
         Assets.ImportAsset("vHierarchy 2", "NoLicense");
         Assets.ImportAsset("Editor Console Pro v3.975", "NoLicense");
-        Folders.Create("Assets", "Plugins");
         Folders.Create("Plugins", "Editor Enhancers");
         Folders.Move("vFolders 2", "Editor Enhancers");
         Folders.Move("vInspector 2", "Editor Enhancers");
@@ -247,8 +246,8 @@ public class HelpfulButtons : OdinEditorWindow
         Refresh();
     }
     
-    bool IsDirectoryOfEditorExtensionsExists() =>
-        Directory.Exists(System.IO.Path.Combine(Application.dataPath, "Plugins/Editor Enhancers"));
+    bool IsDirectoryOfEditorExtensionsDoNotExists() =>
+        !Directory.Exists(System.IO.Path.Combine(Application.dataPath, "Plugins/Editor Enhancers"));
     
     #endregion
 
