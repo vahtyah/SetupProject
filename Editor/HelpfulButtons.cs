@@ -35,67 +35,7 @@ public class HelpfulButtons : OdinEditorWindow
     private const string TAB_GROUP_SCENES = BOX_GROUP_SCENES + "/TabGroup";
 
     // GENERATED METHODS START
-
-        /// <summary>
-        /// Loads the CaptureTheFlag scene.
-        /// Path: D:\Unity\Tanks\Assets\_Project\Scenes\Game Modes\CaptureTheFlag.unity
-        /// </summary>
-        [BoxGroup(BOX_GROUP_SCENES)]
-        [TabGroup(TAB_GROUP_SCENES, "Game Modes")]
-        [ResponsiveButtonGroup(TAB_GROUP_SCENES + "/Game Modes" + "/CaptureTheFlag")]
-        public void LoadCaptureTheFlag()
-        {
-            LoadScene(DIRECTORY_SCENES + "/CaptureTheFlag.unity");
-        }
-
-        /// <summary>
-        /// Loads the Deathmatch scene.
-        /// Path: D:\Unity\Tanks\Assets\_Project\Scenes\Game Modes\Deathmatch.unity
-        /// </summary>
-        [BoxGroup(BOX_GROUP_SCENES)]
-        [TabGroup(TAB_GROUP_SCENES, "Game Modes")]
-        [ResponsiveButtonGroup(TAB_GROUP_SCENES + "/Game Modes" + "/Deathmatch")]
-        public void LoadDeathmatch()
-        {
-            LoadScene(DIRECTORY_SCENES + "/Deathmatch.unity");
-        }
-
-        /// <summary>
-        /// Loads the MainMenu scene.
-        /// Path: D:\Unity\Tanks\Assets\_Project\Scenes\Main Menu\MainMenu.unity
-        /// </summary>
-        [BoxGroup(BOX_GROUP_SCENES)]
-        [TabGroup(TAB_GROUP_SCENES, "Main Menu")]
-        [ResponsiveButtonGroup(TAB_GROUP_SCENES + "/Main Menu" + "/MainMenu")]
-        public void LoadMainMenu()
-        {
-            LoadScene(DIRECTORY_SCENES + "/MainMenu.unity");
-        }
-
-        /// <summary>
-        /// Loads the Test scene.
-        /// Path: D:\Unity\Tanks\Assets\_Project\Scenes\Test\Test.unity
-        /// </summary>
-        [BoxGroup(BOX_GROUP_SCENES)]
-        [TabGroup(TAB_GROUP_SCENES, "Test")]
-        [ResponsiveButtonGroup(TAB_GROUP_SCENES + "/Test" + "/Test")]
-        public void LoadTest()
-        {
-            LoadScene(DIRECTORY_SCENES + "/Test.unity");
-        }
-
-        /// <summary>
-        /// Loads the Test2 scene.
-        /// Path: D:\Unity\Tanks\Assets\_Project\Scenes\Test\Test2.unity
-        /// </summary>
-        [BoxGroup(BOX_GROUP_SCENES)]
-        [TabGroup(TAB_GROUP_SCENES, "Test")]
-        [ResponsiveButtonGroup(TAB_GROUP_SCENES + "/Test" + "/Test2")]
-        public void LoadTest2()
-        {
-            LoadScene(DIRECTORY_SCENES + "/Test2.unity");
-        }
-// GENERATED METHODS END
+    // GENERATED METHODS END
 
     private void LoadScene(string scenePath)
     {
@@ -227,7 +167,7 @@ public class HelpfulButtons : OdinEditorWindow
     }
 
     private bool IsDirectoryOfScriptsDoNotExists() =>
-        !Directory.Exists(System.IO.Path.Combine(Application.dataPath, DIRECTORY_SCENES));
+        !Directory.Exists(System.IO.Path.Combine(Application.dataPath, "_Project"));
 
     [ResponsiveButtonGroup(TAB_GROUP_BUTTONS + "/Button Used Rarely/ImportExtensionEditor",
         VisibleIf = "IsDirectoryOfEditorExtensionsDoNotExists",
